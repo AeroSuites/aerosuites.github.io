@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aerostock — Portail</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:#0a0e1a;color:#e2e8f0;min-height:100vh;display:flex;flex-direction:column}
+.bg{position:fixed;inset:0;background:radial-gradient(1200px 600px at 20% 0%,#1a2744 0%,transparent 60%),radial-gradient(900px 500px at 90% 100%,#0f2a2a 0%,transparent 55%),#0a0e1a;z-index:-1}
+header{padding:28px 24px 8px;text-align:center}
+.brand{font-size:34px;font-weight:800;letter-spacing:6px;text-transform:uppercase;background:linear-gradient(135deg,#e2e8f0,#fff,#94a3b8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:2px}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:32px 20px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));max-width:1000px;width:100%}
+.card{position:relative;display:block;text-decoration:none;color:inherit;border-radius:20px;padding:26px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);transition:all .2s;overflow:hidden}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.22);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.card .band{position:absolute;top:0;left:0;right:0;height:5px}
+.card .icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:16px}
+.card h2{font-size:20px;font-weight:700;color:#fff;margin-bottom:6px}
+.card p{font-size:13.5px;line-height:1.55;color:#94a3b8;min-height:44px}
+.card .go{margin-top:16px;font-size:12.5px;font-weight:700;letter-spacing:.5px;text-transform:uppercase}
+footer{padding:18px;text-align:center;font-size:12px;color:rgba(255,255,255,.25)}
+.card--team .icon{background:rgba(14,165,233,.15);color:#38bdf8}
+.card--team .band{background:#0ea5e9}
+.card--team .go{color:#38bdf8}
+.card--stock .icon{background:rgba(16,185,129,.15);color:#34d399}
+.card--stock .band{background:#10b981}
+.card--stock .go{color:#34d399}
+.card--primes .icon{background:rgba(245,158,11,.15);color:#fbbf24}
+.card--primes .band{background:#f59e0b}
+.card--primes .go{color:#fbbf24}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+<header>
+  <div class="brand">Aerostock</div>
+  <div class="sub">Portail des applications</div>
+</header>
+<main>
+  <div class="grid">
+    <!-- Pour un domaine personnalisé plus tard : remplacer simplement les href -->
+    <a class="card card--team" href="https://aerostock.github.io/aeroteam/">
+      <div class="band"></div>
+      <div class="icon">&#9992;</div>
+      <h2>AeroTeam</h2>
+      <p>Gestion des équipes de maintenance : planning, affectation des tâches, consignes et préparation de charge.</p>
+      <div class="go">Ouvrir &rarr;</div>
+    </a>
+    <a class="card card--stock" href="https://aerostock.github.io/stock/">
+      <div class="band"></div>
+      <div class="icon">&#128230;</div>
+      <h2>AeroStock</h2>
+      <p>Catalogue des ingrédients, pièces récurrentes et outillages, avec photos et validation Telegram.</p>
+      <div class="go">Ouvrir &rarr;</div>
+    </a>
+    <a class="card card--primes" href="https://aerostock.github.io/primes/">
+      <div class="band"></div>
+      <div class="icon">&#128176;</div>
+      <h2>AeroPrimes</h2>
+      <p>Déclaration des interventions (prime toilettes) par les agents, validation et export par le manager.</p>
+      <div class="go">Ouvrir &rarr;</div>
+    </a>
+  </div>
+</main>
+<footer>Aerostock — accès interne</footer>
+</body>
+</html>
